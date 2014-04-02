@@ -1,0 +1,94 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="cs2103_project_UI_logic.WorkBoard"
+	x:Name="Window"
+	Title="WorkBoard"
+	Width="640" Height="480" AllowsTransparency="True" WindowStyle="None">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.402*"/>
+            <ColumnDefinition Width="0.598*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.ColumnSpan="2" Margin="0,0,0,-15" Stroke="Black">
+            
+        </Rectangle>
+        <Button Content="" Margin="15.498,0,0,21.161" VerticalAlignment="Bottom" Height="88.177" RenderTransformOrigin="0.5,0.5" BorderThickness="0" HorizontalAlignment="Left" Width="103.226">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+           
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="24.059"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="" HorizontalAlignment="Right" Margin="0,0,-47.334,6.04" VerticalAlignment="Bottom" Width="99.284" Height="75.96" Opacity="0.865" RenderTransformOrigin="0.5,0.5" BorderThickness="0">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="20.814"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-18.62"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+           
+        </Button>
+        <Button Content="" Grid.Column="1" Margin="92.889,0,181.737,13.362" VerticalAlignment="Bottom" Height="73.316" RenderTransformOrigin="0.5,0.5" BorderThickness="0">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-11.44"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+           
+        </Button>
+        <Button Content="" Grid.Column="1" Margin="0,0,33.551,13.481" VerticalAlignment="Bottom" Height="90.214" RenderTransformOrigin="0.768,0.625" HorizontalAlignment="Right" Width="87.093">
+           
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="17.829"/>
+                    <TranslateTransform X="-2.914" Y="4.698"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="71" Height="65.96" Name="CloseButton" Click="CloseButton_Click">
+            
+        </Button>
+        <Label Content="Recurring :" Margin="102.001,187.431,43.854,0" FontFamily="Kristen ITC" FontSize="16" Height="30.96" VerticalAlignment="Top"/>
+        <Label Content="End Time :" Margin="109.001,155.674,47.854,0" VerticalAlignment="Top" FontFamily="Kristen ITC" FontSize="16"/>
+        <Label Content="Start Time :" Margin="98.001,119.917,47.854,0" VerticalAlignment="Top" FontFamily="Kristen ITC" FontSize="16"/>
+        <Label Content="Date :" Margin="0,85.608,55.854,0" VerticalAlignment="Top" FontFamily="Kristen ITC" FontSize="16" HorizontalAlignment="Right" Width="58.993" RenderTransformOrigin="0.451,0.656"/>
+        <Label Content="Name :" Margin="0,52.406,43.854,0" VerticalAlignment="Top" FontFamily="Kristen ITC" FontSize="16" HorizontalAlignment="Right" Width="70.993" RenderTransformOrigin="0.451,0.656"/>
+        <Label Content="Starred :" Margin="123.001,0,47.854,186.406" FontFamily="Kristen ITC" FontSize="16" Height="30.96" VerticalAlignment="Bottom" RenderTransformOrigin="0.463,0.496"/>
+        <Label Content="Reminder :" Margin="109.001,0,47.854,149.689" FontFamily="Kristen ITC" FontSize="16" Height="30.96" VerticalAlignment="Bottom"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="29.203" Margin="-43.854,122.471,0,0" TextWrapping="Wrap" Text="STime" VerticalAlignment="Top" Width="214.006"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="29.203" Margin="-43.854,155.674,0,0" TextWrapping="Wrap" Text="ETime" VerticalAlignment="Top" Width="214.006"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="-43.854,193.188,0,219.609" TextWrapping="Wrap" Text="RecurringBox" Width="214.006"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="29.203" Margin="-43.854,0,0,186.406" TextWrapping="Wrap" Text="StarredBox" VerticalAlignment="Bottom" Width="214.006"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="29.203" Margin="-43.854,0,0,151.446" TextWrapping="Wrap" Text="ReminderBox" VerticalAlignment="Bottom" Width="214.006"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="29.203" Margin="-43.854,52.406,0,0" TextWrapping="Wrap" Text="NameBox" VerticalAlignment="Top" Width="214.006" TextChanged="NameBox_TextChanged" />
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="29.203" Margin="-43.854,88.162,0,0" TextWrapping="Wrap" Text="DateBox" VerticalAlignment="Top" Width="214.006"/>
+        <Button Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Height="65.96" Click="HomeButton_Click" Name="HomeButton">
+           
+        </Button>
+        <Label Content="Status :" Margin="123.001,0,47.854,114.729" FontFamily="Kristen ITC" FontSize="16" Height="30.96" VerticalAlignment="Bottom" RenderTransformOrigin="0.463,0.496"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="29.203" Margin="-43.854,0,0,118.243" TextWrapping="Wrap" Text="StatusBox" VerticalAlignment="Bottom" Width="214.006"/>
+    </Grid>
+</Window>
